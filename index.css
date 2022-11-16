@@ -18,10 +18,15 @@ body{
     font-size: 2.5rem;
     font-weight: bold;
     margin-left: 8rem;
+    text-decoration: none;
+    color: black;
 }
 
 .color__blue{
     color: #00A5EC;
+    text-decoration: none;
+    font-size: 2.5 rem;
+    font-weight: bold;
 }
 .add__new__task{
     display: flex;
@@ -239,7 +244,10 @@ body{
     box-shadow: 0px 3px 30px #7B7B7B29;
     padding-left: 100px;
         } 
-        
+.text__decor1{
+    text-decoration: none;
+    color: black;
+        }
 .color__blue1{
         color: #00A5EC;
         margin-left: 10px;

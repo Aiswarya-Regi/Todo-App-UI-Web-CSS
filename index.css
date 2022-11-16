@@ -5,7 +5,74 @@ body{
     background: #F7F7F7 0% 0% no-repeat padding-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+  
+  }
 
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+  }
+  
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+.container input:checked ~ .checkmark {
+    background-color: #C2C2C2;
+  }
+ 
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+.container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+.container .checkmark:after {
+    left: 11px;
+    top: 7px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+input:checked ~ .task__name{
+    color: #C2C2C2;
+    text-decoration: line-through;
+}
+
+ .task__name{
+    color: #424242;
+    font-size: 16px;
+    margin-left: 8px;
+    padding-top: 3px;
+}
 .header{
     display: flex;
     align-items: center;
@@ -83,9 +150,11 @@ body{
     height: 360px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #EDEDED;
+    display: block;
     border-radius: 10px;
     margin-right: 30px;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 .item__name{
     padding: 20px 0 20px 20px;
@@ -243,14 +312,17 @@ body{
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 30px #7B7B7B29;
     padding-left: 100px;
-        } 
+    } 
+
 .text__decor1{
     text-decoration: none;
     color: black;
         }
+        
 .color__blue1{
         color: #00A5EC;
         margin-left: 10px;
+        
         }
 
 .body__container{
